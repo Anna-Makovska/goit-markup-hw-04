@@ -46,11 +46,14 @@ position: absolute;
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 
 }
 .header-container {
     display:flex;
     align-items: center;
+   
+
 
 }
 .header-nav {
@@ -110,17 +113,20 @@ position: absolute;
     color: #404bbf;
     
 }
-.active:hover:after {
+.active-link {
+    color:#404bbf;
+}
+.active::after {
     content: '';
     border-radius: 2px;
-        width: 48px;
+        width: 100%;
         height: 4px;
         display:block;
-        background-color: #404bbf;
+        
         left:0;
-        bottom: -2px;
-  
-position: absolute;
+        bottom: -1px;
+        background-color: #404bbf;
+        position: absolute;
 }
   
 .contacts {
@@ -219,7 +225,7 @@ flex-basis: calc((100% - 3 * 24px) / 4);
         border: 1px solid #8e8f99;
             border-radius: 4px;
             background: #f4f4fd;
-            display: inline-flex;
+            display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 8px;
@@ -286,15 +292,16 @@ padding-bottom: 32px;
 .icons-list /*ul*/ {
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    gap: 24px;
 
 
 }
 .icons-team /*li*/{
     width: 40px;
     height: 40px;
-    margin: 0 auto;
-      gap: 24px;
+  
+     
 
 }
 
@@ -316,7 +323,8 @@ padding-bottom: 32px;
     display: flex;
     align-items: center;
         justify-content: center;
-        fill: white;
+        fill: #f4f4fd;
+        
 
 }
 .team-member {
@@ -392,16 +400,14 @@ position: absolute;
     padding-top: 40px;
     padding-left: 32px;
     padding-right: 32px;
-}
-.overlay p {
-    font-weight: 400;
+font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #f4f4fd;
 }
 .portfolio-list:hover .overlay {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 
@@ -459,15 +465,17 @@ color: #f4f4fd;
         line-height: 1.5;
         letter-spacing: 0.02em;
     color: white;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     
 
 }
 .footer-container {
     display: flex;
+     align-items: baseline;
+
 }
-.footer-media {
-    margin-left: 120px;
+.footer-info {
+    margin-right: 120px;
 }
 .footer-list {
     gap: 16px;
